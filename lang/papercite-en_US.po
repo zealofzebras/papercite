@@ -30,3 +30,11 @@ msgstr "Type:"
 #: papercite.classes.php:1140
 msgid "Filter"
 msgstr "Filter"
+
+#: default-bibtex.tpl:5 default-bibshow.tpl:3
+msgid "Download PDF"
+msgstr "Download PDF"
+
+#: default-bibtex.tpl:6 default-bibshow.tpl:4
+msgid "View document in publisher site"
+msgstr "View document in publisher site"
