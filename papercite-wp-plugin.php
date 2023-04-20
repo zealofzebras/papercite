@@ -9,6 +9,7 @@
   Author URI: http://www.bpiwowar.net
   Author: digfish
   Author URI: http://digfish.org
+  Text Domain: papercite
 */
 
 // isolate papercite class in their own class file, keeping only the wordpress integtation
@@ -46,7 +47,12 @@ function papercite_init()
 
   // Initialise the object
     $papercite = new Papercite();
+
+  // Load the language file
+    load_plugin_textdomain( 'papercite', false, 'papercite/lang/' );
 }
+
+
 
 // --- Callback function ----
 /**

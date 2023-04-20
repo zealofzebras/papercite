@@ -110,12 +110,21 @@ class BibtexConverter
    *   lang  => any string $s as long as proper lang/$s.php exists
    * @return void
    */
-    function __construct($options = array(), &$template, &$entry_template)
+    function __construct($options = array(), &$template, &$entry_template, $language = "en")
     {
         $this->_template = &$template;
         $this->_entry_template = &$entry_template;
 
       //  $this->_parser = new PaperciteStructures_BibTex(array('removeCurlyBraces' => true));
+
+      $cd = dirname(__FILE__);
+      if (empty($language)) {
+        $language = apply_filters( 'wpml_current_language', NULL );
+      }
+
+      if (!file_exists($cd . "/lang/" . $language . ".php")) {
+        $language = "en";
+      }
 
       // Default options
         $this->_options = array(
@@ -129,7 +138,7 @@ class BibtexConverter
         'sort' => 'none',
         'order' => 'none',
 
-        'lang' => 'en',
+        'lang' => $language,
 
         'key_format' => 'numeric',
       
@@ -370,6 +379,10 @@ class BibtexConverter
             throw new \Exception("Template is empty");
         }
 
+      // Insert language strings
+        $pattern = '/@_@([^@]+)(?:@:_@([^@]+))?(?:@:_@([^@]+))?(?:@:_@([^@]+))?@;_@/s';
+        $result = preg_replace_callback(BibtexConverter::$mainPattern, array($this, "_callback_string"), $result);
+
       // Replace global values
         $result = preg_replace('/@globalcount@/', $this->_helper->lcount($data, 2), $result);
         $result = preg_replace('/@globalgroupcount@/', count($data), $result);
@@ -403,6 +416,27 @@ class BibtexConverter
 
     static $mainPattern = "/@([^@]+)@([^@]*)/s";
 
+  /**
+     * LString callback function
+     */
+    function _callback_string($match)
+    {
+      $type = trim(trim(empty($match[1][1]) ? "e" : $match[1][1]), '_');
+      switch ($type) {
+        case 'esc_attr':
+          return esc_attr__($match[1][0], 'papercite');
+        case 'esc_html':
+          return esc_html__($match[1][0], 'papercite');
+        case 'x':
+          return _x($match[1][0], $match[1][2], 'papercite');
+        case 'n':
+          return _n($match[1][0], $match[1][2], $this->_get_value($match[1][3]), 'papercite');
+        case 'e':
+        default:
+          return __($match[1][0], 'papercite');
+      }
+        
+    }
   /**
    * Main callback function
    */

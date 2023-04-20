@@ -998,7 +998,7 @@ class Papercite
      * @param options The options to pass to bib2tpl
      * @param getKeys Keep track of the keys for a final substitution
      */
-    function showEntries($refs, $goptions, $options, $getKeys, $mainTpl, $formatTpl, $mode)
+    function showEntries($refs, $goptions, $options, $getKeys, $mainTpl, $formatTpl, $mode, $language = "")
     {
 
 
@@ -1031,7 +1031,7 @@ class Papercite
         }
 
         // Convert (also set the citation key)
-        $bib2tpl = new BibtexConverter($options, $main, $bibtexEntryTemplate);
+        $bib2tpl = new BibtexConverter($options, $main, $bibtexEntryTemplate, $language);
         $bib2tpl->setGlobal("WP_PLUGIN_URL", WP_PLUGIN_URL);
         $bib2tpl->setGlobal("PAPERCITE_DATA_URL", Papercite::getCustomDataDirectory());
 
@@ -1104,9 +1104,9 @@ class Papercite
             <input type="hidden" name="papercite_post_id" value="<?php echo $post->ID ?>">
             <table style="border-top: solid 1px #eee; border-bottom: solid 1px #eee; width: 100%">
                 <tr>
-                    <td>Authors:</td>
+                    <td><?php _e("Authors:"); ?></td>
                     <td><select name="papercite_author" id="papercite_author">
-                            <option value="">ALL</option>
+                            <option value=""><?php _e("ALL"); ?></option>
                             <?php
                             $authors = preg_split("#\s*\\|\s*#", $original_authors);
                             if (Papercite::array_get($options, "sortauthors", 0)) {
@@ -1123,9 +1123,9 @@ class Papercite
                             ?>
                         </select></td>
 
-                    <td>Type:</td>
+                    <td><?php _e("Type:"); ?></td>
                     <td><select name="papercite_allow" id="papercite_type">
-                            <option value="">ALL</option>
+                            <option value=""><?php _e("ALL"); ?></option>
                             <?php
                             $types = preg_split("#\s*,\s*#", $original_allow);
                             foreach ($types as $type) {
@@ -1137,7 +1137,7 @@ class Papercite
                             }
                             ?>
                         </select></td>
-                    <td><input type="submit" value="Filter"/></td>
+                    <td><input type="submit" value="<?php _e("Filter"); ?>"/></td>
                 </tr>
             </table>
         </form>
