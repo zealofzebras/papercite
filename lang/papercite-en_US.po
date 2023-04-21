@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-04-20 22:38+0200\n"
-"PO-Revision-Date: 2023-04-20 22:38+0200\n"
+"POT-Creation-Date: 2023-04-21 11:33+0200\n"
+"PO-Revision-Date: 2023-04-21 11:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: ;_e\n"
+"X-Poedit-KeywordsList: ;_e;__\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: papercite.classes.php:1107
@@ -31,10 +31,40 @@ msgstr "Type:"
 msgid "Filter"
 msgstr "Filter"
 
-#: default-bibtex.tpl:5 default-bibshow.tpl:3
-msgid "Download PDF"
-msgstr "Download PDF"
+#: papercite_options.php:401
+msgid "Journal/magazine article"
+msgstr ""
 
-#: default-bibtex.tpl:6 default-bibshow.tpl:4
-msgid "View document in publisher site"
-msgstr "View document in publisher site"
+#: papercite_options.php:405
+msgid "Paper in conference proceedings"
+msgstr ""
+
+#: papercite_options.php:408
+msgid "Technical documentation"
+msgstr ""
+
+#: papercite_options.php:411
+msgid "Master's thesis"
+msgstr ""
+
+#: papercite_options.php:414
+msgid "Ph.D. thesis"
+msgstr ""
+
+#: papercite_options.php:417
+msgid "Conference proceedings"
+msgstr ""
+
+#: papercite_options.php:420
+msgid "Technical report"
+msgstr ""
+
+#: papercite_options.php:423
+msgid "Book chapter"
+msgstr ""
+
+#msgid "Download PDF"
+#msgstr "Download PDF"
+
+#msgid "View document in publisher site"
+#msgstr "View document in publisher site"
