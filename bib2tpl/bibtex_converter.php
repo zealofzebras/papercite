@@ -381,7 +381,7 @@ class BibtexConverter
 
       // Insert language strings
         $pattern = '/@_@([^@]+)(?:@:_@([^@]+))?(?:@:_@([^@]+))?(?:@:_@([^@]+))?@;_@/s';
-        $result = preg_replace_callback(BibtexConverter::$mainPattern, array($this, "_callback_string"), $result);
+        $result = preg_replace_callback($pattern, array($this, "_callback_string"), $result);
 
       // Replace global values
         $result = preg_replace('/@globalcount@/', $this->_helper->lcount($data, 2), $result);
