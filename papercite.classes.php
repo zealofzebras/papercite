@@ -1104,9 +1104,9 @@ class Papercite
             <input type="hidden" name="papercite_post_id" value="<?php echo $post->ID ?>">
             <table style="border-top: solid 1px #eee; border-bottom: solid 1px #eee; width: 100%">
                 <tr>
-                    <td><?php _e("Authors:"); ?></td>
+                    <td><?php _e("Authors:", "papercite"); ?></td>
                     <td><select name="papercite_author" id="papercite_author">
-                            <option value=""><?php _e("ALL"); ?></option>
+                            <option value=""><?php _e("ALL", "papercite"); ?></option>
                             <?php
                             $authors = preg_split("#\s*\\|\s*#", $original_authors);
                             if (Papercite::array_get($options, "sortauthors", 0)) {
@@ -1123,9 +1123,9 @@ class Papercite
                             ?>
                         </select></td>
 
-                    <td><?php _e("Type:"); ?></td>
+                    <td><?php _e("Type:", "papercite"); ?></td>
                     <td><select name="papercite_allow" id="papercite_type">
-                            <option value=""><?php _e("ALL"); ?></option>
+                            <option value=""><?php _e("ALL", "papercite"); ?></option>
                             <?php
                             $types = preg_split("#\s*,\s*#", $original_allow);
                             foreach ($types as $type) {
@@ -1137,7 +1137,7 @@ class Papercite
                             }
                             ?>
                         </select></td>
-                    <td><input type="submit" value="<?php _e("Filter"); ?>"/></td>
+                    <td><input type="submit" value="<?php _e("Filter", "papercite"); ?>"/></td>
                 </tr>
             </table>
         </form>

@@ -1,0 +1,47 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: papercite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-24 00:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: papercite"
+
+#: papercite_options.php:423
+msgid "Book chapter"
+msgstr ""
+
+#: papercite_options.php:417
+msgid "Conference proceedings"
+msgstr ""
+
+#: papercite_options.php:401
+msgid "Journal/magazine article"
+msgstr ""
+
+#: papercite_options.php:411
+msgid "Master's thesis"
+msgstr ""
+
+#: papercite_options.php:405
+msgid "Paper in conference proceedings"
+msgstr ""
+
+#: papercite_options.php:414
+msgid "Ph.D. thesis"
+msgstr ""
+
+#: papercite_options.php:408
+msgid "Technical documentation"
+msgstr ""
+
+#: papercite_options.php:420
+msgid "Technical report"
+msgstr ""

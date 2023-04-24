@@ -49,9 +49,8 @@ function papercite_init()
     $papercite = new Papercite();
 
   // Load the language file
-    load_plugin_textdomain( 'papercite', false, 'papercite/lang/' );
+    load_plugin_textdomain( 'papercite', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 }
-
 
 
 // --- Callback function ----
