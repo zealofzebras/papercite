@@ -14,34 +14,266 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: papercite"
 
-#: papercite_options.php:423
-msgid "Book chapter"
+#: bib2tpl/lang/i18n.php:4
+msgid "All"
 msgstr ""
 
-#: papercite_options.php:417
-msgid "Conference proceedings"
+#: bib2tpl/lang/i18n.php:6
+msgid "january"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:6
+msgid "february"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:7
+msgid "march"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:7
+msgid "april"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:8
+msgid "may"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:8
+msgid "june"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:9
+msgid "july"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:9
+msgid "august"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:10
+msgid "september"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:10
+msgid "october"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:11
+msgid "november"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:11
+msgid "december"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:14
+msgid "Articles"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:15
+msgid "Books"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:16
+msgid "Booklets"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:17
+msgid "Conference Papers"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:18
+msgid "In Books"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:19
+msgid "In Collections"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:20
+msgid "In Proceedings"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:21
+msgid "Manuals"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:22
+msgid "Master's Theses"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:23
+msgid "Miscellaneous"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:24
+msgid "Dissertations"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:25
+msgid "Proceedings"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:26
+msgid "Technical Reports"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:27
+msgid "Unpublished"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:30
+msgid "misc"
+msgstr ""
+
+#: papercite.classes.php:1107
+msgid "Authors:"
+msgstr ""
+
+#: papercite.classes.php:1109 papercite.classes.php:1128
+msgid "ALL"
+msgstr ""
+
+#: papercite.classes.php:1126
+msgid "Type:"
+msgstr ""
+
+#: papercite.classes.php:1140
+msgid "Filter"
 msgstr ""
 
 #: papercite_options.php:401
 msgid "Journal/magazine article"
 msgstr ""
 
-#: papercite_options.php:411
-msgid "Master's thesis"
-msgstr ""
-
 #: papercite_options.php:405
 msgid "Paper in conference proceedings"
-msgstr ""
-
-#: papercite_options.php:414
-msgid "Ph.D. thesis"
 msgstr ""
 
 #: papercite_options.php:408
 msgid "Technical documentation"
 msgstr ""
 
+#: papercite_options.php:411
+msgid "Master's thesis"
+msgstr ""
+
+#: papercite_options.php:414
+msgid "Ph.D. thesis"
+msgstr ""
+
+#: papercite_options.php:417
+msgid "Conference proceedings"
+msgstr ""
+
 #: papercite_options.php:420
 msgid "Technical report"
+msgstr ""
+
+#: papercite_options.php:423
+msgid "Book chapter"
+msgstr ""
+
+#: format\apa.tpl:20 format\britishmedicaljournal.tpl:20 format\britishmedicaljournal.tpl:26 format\harvard.tpl:20 format\harvard.tpl:26 format\mla.tpl:20 format\mla.tpl:26 format\plain.tpl:30 format\plain.tpl:36
+msgid "et al."
+msgstr ""
+
+#: format\apa.tpl:29 format\ieee_mod.tpl:71 format\ieee_mod.tpl:75 format\ieee.tpl:59 format\ieee.tpl:63
+msgid "Ed"
+msgstr ""
+
+#: format\apa.tpl:29 format\apa.tpl:67 format\harvard.tpl:29 format\harvard.tpl:57 format\harvard.tpl:61 format\harvard.tpl:69 format\harvard.tpl:73 format\ieee_mod.tpl:71 format\ieee_mod.tpl:75 format\ieee.tpl:59 format\ieee.tpl:63 format\mla.tpl:55 format\mla.tpl:59 format\mla.tpl:63 format\mla.tpl:67 format\plain.tpl:39
+msgid "Eds"
+msgstr ""
+
+#: format\apa.tpl:63 format\apa.tpl:67 format\britishmedicaljournal.tpl:63 format\britishmedicaljournal.tpl:67 format\chicago.tpl:63 format\harvard.tpl:73 format\ieee_mod.tpl:71 format\ieee_mod.tpl:75 format\ieee.tpl:59 format\ieee.tpl:63 format\mla.tpl:63 format\mla.tpl:67 format\turabian.tpl:67
+msgid "ed."
+msgstr ""
+
+#: format\apa.tpl:63 format\apa.tpl:67 format\chicago.tpl:63 format\ieee_mod.tpl:71 format\ieee_mod.tpl:75 format\ieee_mod.tpl:79 format\ieee.tpl:59 format\ieee.tpl:63 format\ieee.tpl:67 format\mla.tpl:63 format\mla.tpl:67
+msgid "Vol."
+msgstr ""
+
+#: format\apa.tpl:67 format\ieee_mod.tpl:75 format\ieee_mod.tpl:79 format\ieee_mod.tpl:83 format\ieee.tpl:63 format\ieee.tpl:67 format\ieee.tpl:71
+msgid "pp."
+msgstr ""
+
+#: format\apa.tpl:79 format\britishmedicaljournal.tpl:79 format\chicago.tpl:83 format\harvard.tpl:81 format\ieee_mod.tpl:87 format\ieee.tpl:75 format\mla.tpl:75 format\turabian.tpl:75
+msgid "PhD Thesis"
+msgstr ""
+
+#: format\apa.tpl:79 format\britishmedicaljournal.tpl:79 format\chicago.tpl:83 format\harvard.tpl:81 format\ieee.tpl:75 format\mla.tpl:75 format\turabian.tpl:75
+msgid "Master Thesis"
+msgstr ""
+
+#: format\chicago.tpl:32 format\chicago.tpl:35 format\chicago.tpl:36 format\chicago.tpl:37 format\ieee_mod.tpl:6 format\ieee_mod.tpl:9 format\ieee_mod.tpl:44 format\ieee_mod.tpl:47 format\ieee_mod.tpl:48 format\ieee_mod.tpl:49 format\ieee.tpl:32 format\ieee.tpl:35 format\ieee.tpl:36 format\ieee.tpl:37 format\mla.tpl:32 format\mla.tpl:35 format\mla.tpl:36 format\mla.tpl:37 format\plain.tpl:44 format\plain.tpl:48 format\turabian.tpl:30 format\turabian.tpl:32 format\turabian.tpl:35 format\turabian.tpl:36 format\turabian.tpl:37
+msgid "and"
+msgstr ""
+
+#: format\chicago.tpl:55 format\chicago.tpl:63 format\chicago.tpl:67 format\turabian.tpl:55 format\turabian.tpl:63
+msgid "Edited by"
+msgstr ""
+
+#: format\ieee_mod.tpl:50 format\ieee.tpl:38
+msgid "Jan."
+msgstr ""
+
+#: format\ieee_mod.tpl:51 format\ieee.tpl:39
+msgid "Feb."
+msgstr ""
+
+#: format\ieee_mod.tpl:52 format\ieee.tpl:40
+msgid "Mar."
+msgstr ""
+
+#: format\ieee_mod.tpl:53 format\ieee.tpl:41
+msgid "Apr."
+msgstr ""
+
+#: format\ieee_mod.tpl:54 format\ieee.tpl:42
+msgid "May"
+msgstr ""
+
+#: format\ieee_mod.tpl:55 format\ieee.tpl:43
+msgid "June"
+msgstr ""
+
+#: format\ieee_mod.tpl:56 format\ieee.tpl:44
+msgid "July"
+msgstr ""
+
+#: format\ieee_mod.tpl:57 format\ieee.tpl:45
+msgid "Aug."
+msgstr ""
+
+#: format\ieee_mod.tpl:58 format\ieee.tpl:46
+msgid "Sept."
+msgstr ""
+
+#: format\ieee_mod.tpl:59 format\ieee.tpl:47
+msgid "Oct."
+msgstr ""
+
+#: format\ieee_mod.tpl:60 format\ieee.tpl:48
+msgid "Nov."
+msgstr ""
+
+#: format\ieee_mod.tpl:61 format\ieee.tpl:49
+msgid "Dec."
+msgstr ""
+
+#: format\ieee_mod.tpl:75 format\ieee_mod.tpl:79 format\ieee_mod.tpl:83 format\ieee.tpl:63 format\ieee.tpl:67 format\ieee.tpl:71
+msgid "p."
+msgstr ""
+
+#: format\ieee.tpl:67
+msgid "iss."
+msgstr ""
+
+#: tpl\av-bibtex.tpl:10 tpl\default-bibshow.tpl:4 tpl\default-bibtex.tpl:6
+msgid "View document in publisher site"
+msgstr ""
+
+#: tpl\av-bibtex.tpl:18 tpl\av-bibtex.tpl:18 tpl\default-bibshow.tpl:3 tpl\default-bibtex.tpl:5
+msgid "Download PDF"
 msgstr ""

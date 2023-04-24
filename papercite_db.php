@@ -31,7 +31,6 @@ $papercite_table_name = $GLOBALS["wpdb"]->prefix . "plugin_papercite";
 $papercite_table_name_url = $papercite_table_name . "_url";
 $papercite_db_version = "1.9";
 
-
 function papercite_msg_upgraded() {
     print "<p style='text-align: center; color: blue'>Papercite plugin: database updated to version $GLOBALS[papercite_db_version]</p>";
 }

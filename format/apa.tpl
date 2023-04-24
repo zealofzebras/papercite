@@ -17,7 +17,7 @@
 <property name="primaryCreatorListMore" value="7"/>
 <property name="primaryCreatorListLimit" value="6"/>
 <property name="dateFormat" value="1"/>
-<property name="primaryCreatorListAbbreviation" value=", et al."/>
+<property name="primaryCreatorListAbbreviation" value=", @_@et al.@;_@"/>
 <property name="otherCreatorListMore" value=""/>
 <property name="runningTimeFormat" value="1"/>
 <property name="primaryCreatorRepeatString" value=""/>
@@ -26,7 +26,7 @@
 <property name="otherCreatorListAbbreviation" value=""/>
 <property name="pageFormat" value="2"/>
 <property name="editorSwitch" value="1"/>
-<property name="editorSwitchIfYes" value="editor (^Ed.^Eds.^). "/>
+<property name="editorSwitchIfYes" value="editor (^@_@Ed@;_@.^@_@Eds@;_@.^). "/>
 <property name="primaryCreatorSepFirstBetween" value=", "/>
 <property name="primaryCreatorSepNextBetween" value=", "/>
 <property name="primaryCreatorSepNextLast" value=", &amp; "/>
@@ -60,11 +60,11 @@
 </format>
 
 <format types="book">
-@?author@@author@. @;@@?year@(@year@). @;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;@;@@?edition||volume@ (@:@@;@@?edition@@edition@ ed.@?volume@ @:@@;volume@@;@@?volume@Vol. @volume@@;@@?edition||volume@)@:@@;@@?address@. @address@: @;@@?publisher@@?@@:@ @;@@publisher@@;@.
+@?author@@author@. @;@@?year@(@year@). @;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;@;@@?edition||volume@ (@:@@;@@?edition@@edition@ @_@ed.@;_@@?volume@ @:@@;volume@@;@@?volume@@_@Vol.@;_@@volume@@;@@?edition||volume@)@:@@;@@?address@. @address@: @;@@?publisher@@?@@:@ @;@@publisher@@;@.
 </format>
 
 <format types="inbook incollection">
-@?author@@author@. @;@@?year@(@year@). @;@@?title@@title@. @;@@?editor@In @editor@ (@?#editor&gt;1@Eds.@:editor@Ed.@;editor@), @;@@?booktitle@@?edition@@:@In @;edition@&lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt; @;@@?edition||volume||pages@(@:@@;@@?edition@@edition@ ed.@;@@?volume@@?pages@, @:@@;pages@Vol. @volume@@;@@?pages@@?address@, @:@@;address@pp. @pages@@;@@?edition||volume||pages@). @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@.
+@?author@@author@. @;@@?year@(@year@). @;@@?title@@title@. @;@@?editor@In @editor@ (@?#editor&gt;1@@_@Eds@;_@.@:editor@Ed.@;editor@), @;@@?booktitle@@?edition@@:@In @;edition@&lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt; @;@@?edition||volume||pages@(@:@@;@@?edition@@edition@ @_@ed.@;_@@;@@?volume@@?pages@, @:@@;pages@@_@Vol.@;_@@volume@@;@@?pages@@?address@, @:@@;address@@_@pp.@;_@ @pages@@;@@?edition||volume||pages@). @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@.
 </format>
 
 <format types="article #">
@@ -76,7 +76,7 @@
 </format>
 
 <format types="phdthesis mastersthesis">
-@?author@@author@. @;@@?year||title@(@:@@;@@?year@(@year@)@?title@. @:@.@;title@@;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;.@;@@?year||title@). @:@@;@@?type@Unpublished @type@ @;@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@PhD Thesis@;@@?entrytype=mastersthesis@Master Thesis@;@@;@@?institution@, @institution@@;@@?address@, @address@@;@.
+@?author@@author@. @;@@?year||title@(@:@@;@@?year@(@year@)@?title@. @:@.@;title@@;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;.@;@@?year||title@). @:@@;@@?type@Unpublished @type@ @;@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@@_@PhD Thesis@;_@@;@@?entrytype=mastersthesis@@_@Master Thesis@;_@@;@@;@@?institution@, @institution@@;@@?address@, @address@@;@.
 </format>
 
 <format types="techreport">

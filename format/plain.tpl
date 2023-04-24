@@ -27,25 +27,25 @@ http://andrius.velykis.lt
 <property name="primaryCreatorListMore" value="100"/>
 <property name="primaryCreatorListLimit" value="100"/>
 <property name="dateFormat" value="1"/>
-<property name="primaryCreatorListAbbreviation" value=", et al"/>
+<property name="primaryCreatorListAbbreviation" value=", @_@et al.@;_@"/>
 <property name="otherCreatorListMore" value="100"/>
 <property name="runningTimeFormat" value="1"/>
 <property name="primaryCreatorRepeatString" value=""/>
 <property name="primaryCreatorRepeat" value="0"/>
 <property name="otherCreatorListLimit" value="100"/>
-<property name="otherCreatorListAbbreviation" value=", et al."/>
+<property name="otherCreatorListAbbreviation" value=", @_@et al.@;_@"/>
 <property name="pageFormat" value="2"/>
 <property name="editorSwitch" value="1"/>
-<property name="editorSwitchIfYes" value="editor (^Ed.^Eds.^), "/>
+<property name="editorSwitchIfYes" value="editor (^Ed.^@_@Eds@;_@.^), "/>
 <property name="primaryCreatorUppercase" value="on"/>
 <property name="otherCreatorUppercase" value="on"/>
 <property name="primaryCreatorSepFirstBetween" value=", "/>
 <property name="primaryCreatorSepNextBetween" value=", "/>
-<property name="primaryCreatorSepNextLast" value=", and "/>
+<property name="primaryCreatorSepNextLast" value=", @_@and@;_@ "/>
 <property name="otherCreatorSepFirstBetween" value=", "/>
 <property name="otherCreatorSepNextBetween" value=", "/>
 <property name="otherCreatorSepNextLast" value=" &amp; "/>
-<property name="primaryTwoCreatorsSep" value=" and "/>
+<property name="primaryTwoCreatorsSep" value=" @_@and@;_@ "/>
 <property name="otherTwoCreatorsSep" value=" &amp; "/>
 <property name="userMonth_1" value=""/>
 <property name="userMonth_2" value=""/>

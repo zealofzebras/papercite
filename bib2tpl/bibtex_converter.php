@@ -90,6 +90,7 @@ class BibtexConverter
    */
     var $_helper;
 
+    var $_language;
 
   /**
    * Global variables that can be accessed in the template
@@ -110,21 +111,12 @@ class BibtexConverter
    *   lang  => any string $s as long as proper lang/$s.php exists
    * @return void
    */
-    function __construct($options = array(), &$template, &$entry_template, $language = "en")
+    function __construct($options = array(), &$template, &$entry_template)
     {
         $this->_template = &$template;
         $this->_entry_template = &$entry_template;
 
       //  $this->_parser = new PaperciteStructures_BibTex(array('removeCurlyBraces' => true));
-
-      $cd = dirname(__FILE__);
-      if (empty($language)) {
-        $language = apply_filters( 'wpml_current_language', NULL );
-      }
-
-      if (!file_exists($cd . "/lang/" . $language . ".php")) {
-        $language = "en";
-      }
 
       // Default options
         $this->_options = array(
@@ -138,7 +130,7 @@ class BibtexConverter
         'sort' => 'none',
         'order' => 'none',
 
-        'lang' => $language,
+        'lang' => 'i18n',
 
         'key_format' => 'numeric',
       
@@ -164,6 +156,8 @@ class BibtexConverter
         }
         $this->_options['lang'] = $translations;
         $this->_helper = new Bib2TplHelper($this->_options);
+
+        $this->_language = apply_filters( 'wpml_current_language', NULL );
     }
 
 
@@ -421,19 +415,19 @@ class BibtexConverter
      */
     function _callback_string($match)
     {
-      $type = trim(trim(empty($match[1][1]) ? "e" : $match[1][1]), '_');
+      $type = trim(trim(empty($match[2]) ? "e" : $match[2]), '_');
       switch ($type) {
         case 'esc_attr':
-          return esc_attr__($match[1][0], 'papercite');
+          return esc_attr__($match[1], 'papercite');
         case 'esc_html':
-          return esc_html__($match[1][0], 'papercite');
+          return esc_html__($match[1], 'papercite');
         case 'x':
-          return _x($match[1][0], $match[1][2], 'papercite');
+          return _x($match[1], $match[3], 'papercite');
         case 'n':
-          return _n($match[1][0], $match[1][2], $this->_get_value($match[1][3]), 'papercite');
+          return _n($match[1], $match[3], $this->_get_value($match[4]), 'papercite');
         case 'e':
         default:
-          return __($match[1][0], 'papercite');
+          return __($match[1], 'papercite');
       }
         
     }
@@ -581,6 +575,10 @@ class BibtexConverter
             if ($this->_entry["entrytype"]) {
                 $type = $this->_entry["entrytype"];
                 $entryTpl = $this->_entry_template->get($type);
+              // Insert language strings
+                $pattern = '/@_@([^@]+)(?:@:_@([^@]+))?(?:@:_@([^@]+))?(?:@:_@([^@]+))?@;_@/s';
+                $entryTpl = preg_replace_callback($pattern, array($this, "_callback_string"), $entryTpl);
+
               //print "<div><b>$type</b>: ". htmlentities($entryTpl). "</div>";
                 $this->_globals["positionInGroup"] = $this->count;
                 $this->_globals["positionInList"] = $this->count;
@@ -619,7 +617,12 @@ class BibtexConverter
 
       // --- If we have an entry
         if (isset($this->_entry) && array_key_exists($name, $this->_entry)) {
-            $v = $this->_entry[$name];
+          // If the entry has a language specific value, use that.
+            if (array_key_exists($name, $this->_entry . "_" . $this->_language)) {
+                $v = $this->_entry[$name . "_" . $this->_language];
+            } else {
+                $v = $this->_entry[$name];
+            }
         } // Global variable
         elseif (array_key_exists($name, $this->_globals)) {
             $v = $this->_globals[$name];

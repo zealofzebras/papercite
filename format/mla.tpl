@@ -17,24 +17,24 @@
 <property name="primaryCreatorListMore" value="4"/>
 <property name="primaryCreatorListLimit" value="1"/>
 <property name="dateFormat" value="0"/>
-<property name="primaryCreatorListAbbreviation" value=", et al."/>
+<property name="primaryCreatorListAbbreviation" value=", @_@et al.@;_@"/>
 <property name="otherCreatorListMore" value="4"/>
 <property name="runningTimeFormat" value="0"/>
 <property name="primaryCreatorRepeatString" value="---"/>
 <property name="primaryCreatorRepeat" value="2"/>
 <property name="otherCreatorListLimit" value="1"/>
-<property name="otherCreatorListAbbreviation" value=", et al."/>
+<property name="otherCreatorListAbbreviation" value=", @_@et al.@;_@"/>
 <property name="pageFormat" value="2"/>
 <property name="editorSwitch" value="1"/>
 <property name="editorSwitchIfYes" value="editor, ^ed.^eds.^ "/>
 <property name="primaryCreatorSepFirstBetween" value=", "/>
 <property name="primaryCreatorSepNextBetween" value=", "/>
-<property name="primaryCreatorSepNextLast" value=", and "/>
+<property name="primaryCreatorSepNextLast" value=", @_@and@;_@ "/>
 <property name="otherCreatorSepFirstBetween" value=", "/>
 <property name="otherCreatorSepNextBetween" value=", "/>
-<property name="otherCreatorSepNextLast" value=" and "/>
-<property name="primaryTwoCreatorsSep" value=" and "/>
-<property name="otherTwoCreatorsSep" value=" and "/>
+<property name="otherCreatorSepNextLast" value=" @_@and@;_@ "/>
+<property name="primaryTwoCreatorsSep" value=" @_@and@;_@ "/>
+<property name="otherTwoCreatorsSep" value=" @_@and@;_@ "/>
 <property name="userMonth_1" value=""/>
 <property name="userMonth_2" value=""/>
 <property name="userMonth_3" value=""/>
@@ -52,19 +52,19 @@
 <property name="dateRangeSameMonth" value="1"/>
 
 <format types="proceedings unpublished misc">
-@?author@@author@. @;@@?title@@title@. @;@@?editor@@?#editor&gt;1@Eds.@:editor@Ed.@;editor@ @editor@. @;@@?address@@address@@?publisher@: @:@@;publisher@@;@@?publisher@@publisher@, @;@@?year@@year@@;@.
+@?author@@author@. @;@@?title@@title@. @;@@?editor@@?#editor&gt;1@@_@Eds@;_@.@:editor@Ed.@;editor@ @editor@. @;@@?address@@address@@?publisher@: @:@@;publisher@@;@@?publisher@@publisher@, @;@@?year@@year@@;@.
 </format>
 
 <format types="inproceedings">
-@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?journal@@journal@. @;@@?editor@@?#editor&gt;1@Eds.@:editor@Ed.@;editor@ @editor@. @;@@?address@@address@: @;@@?publisher@@publisher@, @;@@?date@@date@ @;@@?year@@year@. @;@@?pages@@pages@@;@.
+@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?journal@@journal@. @;@@?editor@@?#editor&gt;1@@_@Eds@;_@.@:editor@Ed.@;editor@ @editor@. @;@@?address@@address@: @;@@?publisher@@publisher@, @;@@?date@@date@ @;@@?year@@year@. @;@@?pages@@pages@@;@.
 </format>
 
 <format types="book">
-@?author@@author@. @;@@?title@@title@. @;@@?series@@series@. @;@@?editor@@?#editor&gt;1@Eds.@:editor@Ed.@;editor@ @editor@. @;@@?edition@@edition@ ed. @;@@?volume@Vol. @volume@. @;@@?address@@address@@?publisher@: @:@@;publisher@@;@@?publisher@@publisher@, @;@@?year@@year@@;@.
+@?author@@author@. @;@@?title@@title@. @;@@?series@@series@. @;@@?editor@@?#editor&gt;1@@_@Eds@;_@.@:editor@Ed.@;editor@ @editor@. @;@@?edition@@edition@ @_@ed.@;_@ @;@@?volume@@_@Vol.@;_@@volume@. @;@@?address@@address@@?publisher@: @:@@;publisher@@;@@?publisher@@publisher@, @;@@?year@@year@@;@.
 </format>
 
 <format types="inbook incollection">
-@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?booktitle@@booktitle@. @;@@?editor@@?#editor&gt;1@Eds.@:editor@Ed.@;editor@ @editor@. @;@@?edition@@edition@ ed. @;@@?volume@Vol. @volume@. @;@@?series@@series@. @;@@?address@@address@: @;@@?publisher@@publisher@, @;@@?year@@year@. @;@@?pages@@pages@@;@.
+@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?booktitle@@booktitle@. @;@@?editor@@?#editor&gt;1@@_@Eds@;_@.@:editor@Ed.@;editor@ @editor@. @;@@?edition@@edition@ @_@ed.@;_@ @;@@?volume@@_@Vol.@;_@@volume@. @;@@?series@@series@. @;@@?address@@address@: @;@@?publisher@@publisher@, @;@@?year@@year@. @;@@?pages@@pages@@;@.
 </format>
 
 <format types="article #">
@@ -72,7 +72,7 @@
 </format>
 
 <format types="phdthesis mastersthesis">
-@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?type@@type@ @;@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@PhD Thesis@;@@?entrytype=mastersthesis@Master Thesis@;@. @;@@?institution@@institution@, @;@@?year@@year@@;@.
+@?author@@author@. @;@@?title@&quot;@title@.&quot; @;@@?type@@type@ @;@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@@_@PhD Thesis@;_@@;@@?entrytype=mastersthesis@@_@Master Thesis@;_@@;@. @;@@?institution@@institution@, @;@@?year@@year@@;@.
 </format>
 
 <format types="techreport">

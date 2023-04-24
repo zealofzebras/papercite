@@ -7,7 +7,7 @@
 <li>
 	@#entry@
 	@?doi@
-	<a href='http://dx.doi.org/@doi@' class='papercite_doi' title='View on publisher site'>doi:@doi@</a>
+	<a href='http://dx.doi.org/@doi@' class='papercite_doi' title='@_@View document in publisher site@:_@esc_attr@;_@'>doi:@doi@</a>
 	@;doi@
 	<br/>
 	<a href="javascript:void(0)" id="papercite_@papercite_id@" class="papercite_toggle">[BibTeX]</a>
@@ -15,7 +15,7 @@
 	<a href="javascript:void(0)" id="papercite_abstract_@papercite_id@" class="papercite_toggle">[Abstract]</a>
 	@;abstract@
 	@?url@
-	<a href="@url@" title='Download PDF' class='papercite_pdf'>[Download PDF]</a>
+	<a href="@url@" title='@_@Download PDF@:_@esc_attr@;_@' class='papercite_pdf'>[@_@Download PDF@:_@esc_attr@;_@]</a>
 	@;url@
 	@?abstract@
 	<blockquote class="papercite_bibtex" id="papercite_abstract_@papercite_id@_block">@abstract@</blockquote>

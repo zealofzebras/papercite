@@ -998,7 +998,7 @@ class Papercite
      * @param options The options to pass to bib2tpl
      * @param getKeys Keep track of the keys for a final substitution
      */
-    function showEntries($refs, $goptions, $options, $getKeys, $mainTpl, $formatTpl, $mode, $language = "")
+    function showEntries($refs, $goptions, $options, $getKeys, $mainTpl, $formatTpl, $mode)
     {
 
 
@@ -1031,7 +1031,7 @@ class Papercite
         }
 
         // Convert (also set the citation key)
-        $bib2tpl = new BibtexConverter($options, $main, $bibtexEntryTemplate, $language);
+        $bib2tpl = new BibtexConverter($options, $main, $bibtexEntryTemplate);
         $bib2tpl->setGlobal("WP_PLUGIN_URL", WP_PLUGIN_URL);
         $bib2tpl->setGlobal("PAPERCITE_DATA_URL", Papercite::getCustomDataDirectory());
 

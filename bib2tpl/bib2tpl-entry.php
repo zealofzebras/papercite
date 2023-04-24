@@ -40,9 +40,32 @@ class PaperciteBibtexEntryFormat {
       }
       $this->format .= ">";
     } else if ($name == "property")  {
-      $this->properties[$att["name"]] = $att["value"];
+    // Insert language strings
+      $pattern = '/@_@([^@]+)(?:@:_@([^@]+))?(?:@:_@([^@]+))?(?:@:_@([^@]+))?@;_@/s';
+      $value = preg_replace_callback($pattern, array($this, "_callback_string"), $att["value"]);
+      $this->properties[$att["name"]] = $value;
     } 
   }
+
+  /**
+     * LString callback function
+     */
+    function _callback_string($match)
+    {
+      $type = trim(trim(empty($match[2]) ? "e" : $match[2]), '_');
+      switch ($type) {
+        case 'esc_attr':
+          return esc_attr__($match[1], 'papercite');
+        case 'esc_html':
+          return esc_html__($match[1], 'papercite');
+        case 'x':
+          return _x($match[1], $match[3], 'papercite');
+        case 'e':
+        default:
+          return __($match[1], 'papercite');
+      }
+        
+    }
 
   function end_element(&$parser, $name) {
     if ($name == "format") {

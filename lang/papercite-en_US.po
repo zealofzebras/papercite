@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-04-21 11:33+0200\n"
-"PO-Revision-Date: 2023-04-21 11:33+0200\n"
+"POT-Creation-Date: 2023-04-24 08:10+0200\n"
+"PO-Revision-Date: 2023-04-24 08:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -14,6 +14,118 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: ;_e;__\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: bib2tpl/lang/i18n.php:4
+msgid "All"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:6
+msgid "january"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:6
+msgid "february"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:7
+msgid "march"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:7
+msgid "april"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:8
+msgid "may"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:8
+msgid "june"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:9
+msgid "july"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:9
+msgid "august"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:10
+msgid "september"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:10
+msgid "october"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:11
+msgid "november"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:11
+msgid "december"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:14
+msgid "Articles"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:15
+msgid "Books"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:16
+msgid "Booklets"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:17
+msgid "Conference Papers"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:18
+msgid "In Books"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:19
+msgid "In Collections"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:20
+msgid "In Proceedings"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:21
+msgid "Manuals"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:22
+msgid "Master's Theses"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:23
+msgid "Miscellaneous"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:24
+msgid "Dissertations"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:25
+msgid "Proceedings"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:26
+msgid "Technical Reports"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:27
+msgid "Unpublished"
+msgstr ""
+
+#: bib2tpl/lang/i18n.php:30
+msgid "misc"
+msgstr ""
 
 #: papercite.classes.php:1107
 msgid "Authors:"
