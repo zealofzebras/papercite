@@ -616,13 +616,12 @@ class BibtexConverter
         }
 
       // --- If we have an entry
-        if (isset($this->_entry) && array_key_exists($name, $this->_entry)) {
-          // If the entry has a language specific value, use that.
-            if (array_key_exists($name . "_" . $this->_language, $this->_entry)) {
-                $v = $this->_entry[$name . "_" . $this->_language];
-            } else {
-                $v = $this->_entry[$name];
-            }
+      // If the entry has a language specific value, use that.
+        if (array_key_exists($name . "_" . $this->_language, $this->_entry)) {
+          $v = $this->_entry[$name . "_" . $this->_language];
+        } 
+        elseif (isset($this->_entry) && array_key_exists($name, $this->_entry)) {
+            $v = $this->_entry[$name];
         } // Global variable
         elseif (array_key_exists($name, $this->_globals)) {
             $v = $this->_globals[$name];
