@@ -602,6 +602,13 @@ class BibtexConverter
           // replace newlines with spaces, to avoid PHP converting them to <br/>
             $str = preg_replace("/[\r\n]+/", " ", $str);
         }
+        
+        $pos = strpos($modifier, ":");
+        if ($pos > 0) {
+            $options =  substr($modifier, $pos+1);
+            $modifier = substr($modifier, 0, $pos);
+        }
+
 
         switch ($modifier) {
             case "sanitize":
@@ -611,6 +618,8 @@ class BibtexConverter
                 $str = wp_strip_all_tags($str);
             case "protect":
                 $str = htmlentities($str);
+            case "replace":
+                $str = $this->preg_replace_single($options, $str);
             case "html":
                 break;
 
@@ -627,5 +636,28 @@ class BibtexConverter
         }
       
         return $str;
+    }
+    
+    function parse_regex($regex) {
+      // Split the SED command into its parts using the "/" delimiter
+      preg_match('#^(/)(.*?[^\\\])/(.*?[^\\\])/([a-zA-Z]*)$#', $regex, $matches);
+      
+      // Extract the search and replace patterns
+      list($full_match, $delimiter, $search, $replace, $flags) = $matches;
+    
+      $replace = str_replace("\/", "/", $replace);
+    
+      // Build the PCRE regex string
+      $preg_replace = '/' . $search . '/' . $flags;
+    
+      // Return the PCRE regex and replacement string as an array
+      return array($preg_replace, $replace);
+    }
+    
+    function preg_replace_single($regex, $string) {
+        $re = $this->parse_regex($regex);
+        list($search, $replace) = $re;
+        $result = preg_replace($search, $replace, $string);
+        return $result;
     }
 }
